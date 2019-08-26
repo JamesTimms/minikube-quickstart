@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Starting minikube as root without vm-driver...
+    command:
+      argv:
+        - "{{ minikube_install_dir }}/minikube"
+        - "--vm-driver=none"
+        - start

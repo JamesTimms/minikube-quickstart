@@ -1,0 +1,6 @@
+# Role for installing minikube
+- src: andrewrothstein.minikube
+#- src: andrewrothstein.kubectl
+
+# Role for installing docker
+- src: geerlingguy.docker

@@ -2,6 +2,15 @@
 127.0.0.1
 
 [local:vars]
+# Docker vars
 ansible_connection=local
-docker_users: [james_reebric_com]
-docker_edition: 'ce'
+docker_users=james_reebric_com
+docker_edition='ce'
+
+# Minikube vars
+minikube_install_dir=/usr/bin
+# Docker not supported so installing docker seperately...
+#minikube_install_drivers: [docker]
+
+# Kubectl vars
+kubectl_install_dir=/usr/bin
