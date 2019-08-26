@@ -14,3 +14,4 @@ minikube_install_dir=/usr/bin
 
 # Kubectl vars
 kubectl_install_dir=/usr/bin
+minikube_vm_driver=none

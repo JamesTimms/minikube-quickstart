@@ -3,9 +3,9 @@
   become: yes
   become_method: sudo
   tasks:
-  - name: Starting minikube as root without vm-driver...
+  - name: Starting minikube as root with vm-driver {{ minikube_vm_driver }}...
     command:
       argv:
         - "{{ minikube_install_dir }}/minikube"
-        - "--vm-driver=none"
+        - "--vm-driver={{ minikube_vm_driver | default(none) }}"
         - start

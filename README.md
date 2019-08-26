@@ -3,9 +3,9 @@ A collection of bash scripts and Ansible playbooks to get a simple minikube depl
 
 
 ## Usage
-If not using localhost, update the local ./hosts file include variables defined there.
+If not using localhost, update the local ./hosts file including variables defined there.
 
-Run `setup_local_minikube.sh` to setup dependencies and run playbooks.
+Run `setup-local-minikube.sh` to setup dependencies and run playbooks.
 
 
 ## Requirements

@@ -1,10 +1,13 @@
 #!/bin/bash
 
 run_ansible_playbooks() {
-  echo "ansible-galaxy -r $PWD/roles/requirements.yml install"
   ansible-galaxy -r $PWD/roles/requirements.yml install
-  echo "ansible-playbook -i hosts -vv $PWD/setup-minikube-from-sratch.yml"
-  ansible-playbook -i hosts -vv $PWD/setup-minikube-from-sratch.yml
+  ansible-playbook -i hosts -vv $PWD/setup-minikube-from-scratch.yml
+  ansible-playbook -i hosts -vv $PWD/start-minikube.yml
+  sudo kubectl get pods --all-namespaces
+  echo ""
+  echo "Wait a few seconds and run 'sudo kubectl get pods --all-namespaces' to see if everything's working as expected :)"
+  echo ""
 }
 
 YUM_PACKAGE_NAME="python python-devl python-pip openssl-devel git ansible"
