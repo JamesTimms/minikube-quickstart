@@ -1,7 +1,7 @@
 #!/bin/bash
 
 run_ansible_playbooks() {
-  ansible-galaxy -r $PWD/roles/requirements.yml install
+  ansible-galaxy role install -r $PWD/roles/requirements.yml
   ansible-playbook -i hosts -vv $PWD/setup-minikube-from-scratch.yml
   ansible-playbook -i hosts -vv $PWD/start-minikube.yml
   sudo kubectl get pods --all-namespaces
